@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: 7cef98cd6d80abc41ae4bd8eb64a92cf
+  - enabled: 1
+    path: Assets/Scenes/ClosingScene.unity
+    guid: aeed0beb33577e74782502af43f5e24b
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
