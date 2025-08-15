@@ -5,6 +5,7 @@ public class PillarSlot : MonoBehaviour
     public string requiredCrystal; // Name of crystal needed
     public GameObject placedCrystalPrefab; // Prefab to spawn
     public Transform socket; // Where it will appear
+    public AudioSource placeCrystalSound; // Sound when crystal is placed
 
     private bool isFilled = false;
     public bool IsCrystalPlaced => isFilled;
@@ -20,6 +21,12 @@ public class PillarSlot : MonoBehaviour
 
             // Remove from inventory
             InventoryManager.Instance.RemoveItem(requiredCrystal);
+
+            // Play sound if assigned
+            if (placeCrystalSound != null)
+            {
+                placeCrystalSound.Play();
+            }
 
             isFilled = true;
             Debug.Log(requiredCrystal + " placed on pillar!");
