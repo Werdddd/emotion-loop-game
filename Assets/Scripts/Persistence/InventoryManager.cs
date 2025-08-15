@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager Instance; // Singleton
+    public static InventoryManager Instance; 
     public List<string> items = new List<string>();
 
     private void Awake()
@@ -11,7 +11,7 @@ public class InventoryManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Keep inventory between scenes
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
