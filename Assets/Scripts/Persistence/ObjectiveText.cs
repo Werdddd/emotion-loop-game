@@ -15,13 +15,25 @@ public class ObjectiveText : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "IceRoomScene":
-                objectiveText.text = "Objectives: Find your way to the other side";
+                objectiveText.text = "Sadness freezes your every step, turning the ground into peril. Leap across its cold emptiness—only then can you chip away at the loop’s hold.";
                 objectiveText.gameObject.SetActive(true);
                 objectiveWrapper.gameObject.SetActive(true);
                 break;
 
             case "FireRoomScene":
-                objectiveText.text = "Objectives: Find your way to the other side";
+                objectiveText.text = "Anger twists the path into a burning maze. Every wall of flame dares you to turn back—but to break the loop, you must find the calm to see the way through.";
+                objectiveText.gameObject.SetActive(true);
+                objectiveWrapper.gameObject.SetActive(true);
+                break;
+
+            case "TutorialScene":
+                objectiveText.text = "Every journey begins small… learn to walk before you face yourself.";
+                objectiveText.gameObject.SetActive(true);
+                objectiveWrapper.gameObject.SetActive(true);
+                break;
+
+            case "MainScene":
+                objectiveText.text = "The loop begins where it always does—beneath the lone tree, before the sealed door. Three emotions must be faced before the bridge can carry you forward.";
                 objectiveText.gameObject.SetActive(true);
                 objectiveWrapper.gameObject.SetActive(true);
                 break;
@@ -36,7 +48,7 @@ public class ObjectiveText : MonoBehaviour
                 }
                 else
                 {
-                    objectiveText.text = $"Objectives: Build a boat to escape! \nWood: {boatBuilder.plankCtr}/3 \nPaddle: {boatBuilder.paddleCtr}/1";
+                    objectiveText.text = $"Joy drifts just out of reach, scattered like pieces on the wind. Gather what remains, rebuild your vessel, and sail past the loop's fading shores. \nWood: {boatBuilder.plankCtr}/3 \nPaddle: {boatBuilder.paddleCtr}/1";
                     objectiveText.gameObject.SetActive(true);
                     objectiveWrapper.gameObject.SetActive(true);
                     break;
