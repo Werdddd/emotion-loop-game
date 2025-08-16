@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PortalToScene4 : MonoBehaviour
 {
-    [SerializeField] private int sceneIndexToLoad = 4; // Scene 4 by default
+    [SerializeField] private int sceneIndexToLoad = 3; // Scene 4 by default
 
     private void OnTriggerEnter(Collider other)
     {

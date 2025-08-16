@@ -684,6 +684,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4070774b0a10386ffac6a63ef316554f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &188087660 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3636294757586469571, guid: 7c99ef5ad92daa81da707215414eb28c, type: 3}
+  m_PrefabInstance: {fileID: 188087658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &205760668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
@@ -771,6 +776,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6129152203369736604, guid: d725756e1479f6796a4c15fd22e87f62, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 1924780114}
+    - target: {fileID: 6129152203369736604, guid: d725756e1479f6796a4c15fd22e87f62, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129152203369736604, guid: d725756e1479f6796a4c15fd22e87f62, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 343022972}
+    - target: {fileID: 6129152203369736604, guid: d725756e1479f6796a4c15fd22e87f62, type: 3}
+      propertyPath: moveScene
+      value: 
+      objectReference: {fileID: 343022982}
+    - target: {fileID: -2707698418275930366, guid: aaa0f2900c724bf4fa4b5fbcd97f3157, type: 3}
+      propertyPath: sceneIndexToLoad
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 81773212720039075, guid: aaa0f2900c724bf4fa4b5fbcd97f3157, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07
@@ -819,22 +844,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6129152203369736604, guid: d725756e1479f6796a4c15fd22e87f62, type: 3}
-      propertyPath: door
-      value: 
-      objectReference: {fileID: 1924780114}
-    - target: {fileID: 6129152203369736604, guid: d725756e1479f6796a4c15fd22e87f62, type: 3}
-      propertyPath: speed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6129152203369736604, guid: d725756e1479f6796a4c15fd22e87f62, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 343022972}
-    - target: {fileID: 6129152203369736604, guid: d725756e1479f6796a4c15fd22e87f62, type: 3}
-      propertyPath: moveScene
-      value: 
-      objectReference: {fileID: 343022982}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2297,6 +2306,7 @@ MonoBehaviour:
   requiredCrystal: FireCrystal
   placedCrystalPrefab: {fileID: 8691106729907297521, guid: 8dc11830270406d4db52373eab850ed1, type: 3}
   socket: {fileID: 2021521793}
+  placeCrystalSound: {fileID: 188087660}
 --- !u!4 &1245506392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5190364663126160745, guid: 2b1f309dcd89560469b67ac7d4e9c8b1, type: 3}
@@ -2479,6 +2489,7 @@ MonoBehaviour:
   requiredCrystal: LandCrystal
   placedCrystalPrefab: {fileID: 3346833868302210774, guid: 2534851f509082b4da94bd70add11c08, type: 3}
   socket: {fileID: 606666635}
+  placeCrystalSound: {fileID: 188087660}
 --- !u!4 &1317835451 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5190364663126160745, guid: 2b1f309dcd89560469b67ac7d4e9c8b1, type: 3}
@@ -3072,6 +3083,7 @@ MonoBehaviour:
   requiredCrystal: IceCrystal
   placedCrystalPrefab: {fileID: 6834439049029159670, guid: 91a181c5d7bbae74a832a23af738815d, type: 3}
   socket: {fileID: 1819587812}
+  placeCrystalSound: {fileID: 188087660}
 --- !u!1 &1875966031
 GameObject:
   m_ObjectHideFlags: 0
