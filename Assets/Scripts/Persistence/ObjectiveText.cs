@@ -49,6 +49,11 @@ public class ObjectiveText : MonoBehaviour
                 }
             }
         }
+        else if (sceneName == "FinalScene")
+        {
+            // Update the objective text dynamically for FinalScene
+            UpdateFinalSceneObjective();
+        }
     }
     private void OnDestroy()
     {
@@ -81,7 +86,7 @@ public class ObjectiveText : MonoBehaviour
         switch (sceneName)
         {
             case "IceRoomScene":
-                SetObjective("Sadness freezes your every step, turning the ground into peril. Leap across its cold emptiness—only then can you chip away at the loop’s hold.");
+                SetObjective("Sadness freezes your every step, turning the ground into peril. Leap across its cold emptiness—only then can you chip away at the loop's hold.");
                 break;
 
             case "FireRoomScene":
@@ -101,25 +106,29 @@ public class ObjectiveText : MonoBehaviour
                 break;
 
             case "FinalScene":
-                {
-                    bool hasAllCrystals =
-                        InventoryManager.Instance != null &&
-                        requiredCrystals.All(cr => InventoryManager.Instance.HasItem(cr));
-
-                    if (hasAllCrystals)
-                    {
-                        SetObjective("You have broken the loop. You have rewritten the pattern. And now, with every thread set free, you unravel yourself—stepping beyond the cycle into the life that waits ahead.");
-                    }
-                    else
-                    {
-                        SetObjective("The pillars stand empty, the bridge lies broken, and the loop pulls you back once more.");
-                    }
-                    break;
-                }
+                UpdateFinalSceneObjective();
+                break;
 
             default:
                 // keep hidden
                 break;
+        }
+    }
+
+    private void UpdateFinalSceneObjective()
+    {
+        // Find all pillar slots in the scene
+        PillarSlot[] pillarSlots = FindObjectsOfType<PillarSlot>();
+
+        bool allPillarsFilled = pillarSlots.Length > 0 && pillarSlots.All(pillar => pillar.IsCrystalPlaced);
+
+        if (allPillarsFilled)
+        {
+            SetObjective("You have broken the loop. You have rewritten the pattern. And now, with every thread set free, you unravel yourself—stepping beyond the cycle into the life that waits ahead.");
+        }
+        else
+        {
+            SetObjective("The pillars stand empty, the bridge lies broken, and the loop pulls you back once more.");
         }
     }
 
